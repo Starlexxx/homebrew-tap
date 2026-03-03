@@ -5,23 +5,23 @@
 class LazyK8s < Formula
   desc "A lazygit-style terminal UI for Kubernetes"
   homepage "https://github.com/Starlexxx/lazy-k8s"
-  version "0.3.1"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Starlexxx/lazy-k8s/releases/download/v0.3.1/lazy-k8s_0.3.1_darwin_amd64.tar.gz"
-      sha256 "6506473b65e4034b45834e68b178bfe233b00b40ce95a659500f718f2e626605"
+      url "https://github.com/Starlexxx/lazy-k8s/releases/download/v0.4.0/lazy-k8s_0.4.0_darwin_amd64.tar.gz"
+      sha256 "6d96e8c87fef9d19ed7721be0d9ca363b0e78af8185f5934961a7890ce454177"
 
-      def install
+      define_method(:install) do
         bin.install "lazy-k8s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Starlexxx/lazy-k8s/releases/download/v0.3.1/lazy-k8s_0.3.1_darwin_arm64.tar.gz"
-      sha256 "5f3c94faf020613e726feabe1c6954acd7ccc959a06ecbb23b894fa045c73845"
+      url "https://github.com/Starlexxx/lazy-k8s/releases/download/v0.4.0/lazy-k8s_0.4.0_darwin_arm64.tar.gz"
+      sha256 "8fe6198a49a768f6709d63ba7e0ba020b44a489adb9646669ac2627041abf6c3"
 
-      def install
+      define_method(:install) do
         bin.install "lazy-k8s"
       end
     end
@@ -29,16 +29,16 @@ class LazyK8s < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Starlexxx/lazy-k8s/releases/download/v0.3.1/lazy-k8s_0.3.1_linux_amd64.tar.gz"
-      sha256 "ff4589233d8e93ae6d4a3905d43deb715cca5c40ea00f535dd9ca3e3d4cb5c9a"
-      def install
+      url "https://github.com/Starlexxx/lazy-k8s/releases/download/v0.4.0/lazy-k8s_0.4.0_linux_amd64.tar.gz"
+      sha256 "489c24acad17d22de80b71bb5538d6fe1f57fc41b780e59d56474caaaf867f00"
+      define_method(:install) do
         bin.install "lazy-k8s"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Starlexxx/lazy-k8s/releases/download/v0.3.1/lazy-k8s_0.3.1_linux_arm64.tar.gz"
-      sha256 "2642e4a48658990757a366378385983cd39dc067cd5d5fc44139cf5d45a05db9"
-      def install
+      url "https://github.com/Starlexxx/lazy-k8s/releases/download/v0.4.0/lazy-k8s_0.4.0_linux_arm64.tar.gz"
+      sha256 "f2638bac27f08b99e22e1afb842c2d3769696398c3d9bf66aeb6a6790059bcfb"
+      define_method(:install) do
         bin.install "lazy-k8s"
       end
     end
